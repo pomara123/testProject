@@ -22,7 +22,10 @@ export class HomeComponent implements OnInit {
   
 
   getSummary() {
-    this.http.get<WikiPage>('https://en.wikipedia.org/w/api.php?format=json&formatversion=2&action=query&prop=extracts&exintro=&explaintext=&titles=Star%20Trek').subscribe 
+
+    const proxyurl = "https://test-project-again.herokuapp.com/";
+    const url = "https://en.wikipedia.org/w/api.php?format=json&formatversion=2&action=query&prop=extracts&exintro=&explaintext=&titles=Star%20Trek"; // site that doesn’t send Access-Control-*
+    this.http.get<WikiPage>(proxyurl + url).subscribe 
     (data => {
       console.log(data.query.pages[0].extract);
       var text = data.query.pages[0].extract;
