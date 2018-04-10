@@ -11,15 +11,15 @@ import { WikiPageService } from '../wiki-page.service';
 export class WikiPageDetailsComponent implements OnInit {
 
   wikipage: WikiPage;
+  btnText: string = 'Get Page';
 
   
   constructor(private wikiPageService: WikiPageService) { }
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  getPage() {
     var wikiJson = this.wikiPageService.getPage();
     console.log(wikiJson);
-          
-        
   }
-
 }
