@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { ContactDetailsComponent } from './contacts/contact-details/contact-details.component';
 import { ContactListComponent } from './contacts/contact-list/contact-list.component';
+import { WikiPageDetailsComponent } from './wiki/wiki-page-details/wiki-page-details.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { ContactListComponent } from './contacts/contact-list/contact-list.compo
     AppComponent,
     HomeComponent,
     ContactDetailsComponent,
-    ContactListComponent
+    ContactListComponent,
+    WikiPageDetailsComponent
   ],
   imports: [
     BrowserModule,
